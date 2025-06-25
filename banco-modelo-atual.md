@@ -10,11 +10,11 @@
 
 ## 📑 Tabelas Atuais
 
-### 1. `nome_da_tabela`
-- **Descrição**: O que essa tabela representa?
+### 1. Área
+- **Descrição**: 
 - **Colunas**:
-  - `id`: int, PK, auto increment
-  - `nome`: varchar(100), não nulo
+  - `idarea`: bigint, PK, auto increment
+  - `atualizadoem`: datetime2, permite nulo
   - `valor`: decimal(10,2), permite nulo
   - ...
 - **Relacionamentos**:
