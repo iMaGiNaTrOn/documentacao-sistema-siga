@@ -12,7 +12,7 @@
 
 ### 1. Área
 
-- **Descrição**: 
+- **Descrição**:
 - **Colunas**:
   - `idarea`: bigint, PK, auto increment
   - `atualizadoem`: datetime2, permite nulo
@@ -40,6 +40,22 @@
   - Relaciona-se com quais outras tabela?
     - Tem chave estrangeira de `idarea` e `idusuario`
 
+### 3. Atualização de Sistema
+
+- **Descrição**: Descreve sobre as atualizações do sistema, com suas datas de lançamento, descrição e versão. Tabela independente, agindo em função da manutenabilidade.
+- **Colunas**:
+  - `idatualizacaosistema`: bigint, PK, não nulo
+  - `atualizadoem`: datetime2, permite nulo
+  - `criadoem`: datetime2, permite nulo
+  - `data`: datetime2, permite nulo
+  - `descricao`: nvarchar(MAX), permite nulo
+  - `versao`: varchar(255), permite nulo
+- **Relacionamentos**:
+  - Tem chave estrangeira? Qual?
+    - Não.
+  - Relaciona-se com quais outras tabela?
+    - Não se relaciona com outras tabelas.
+  
 ---
 
 ## 🧪 Observações
