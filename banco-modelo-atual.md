@@ -11,6 +11,7 @@
 ## 📑 Tabelas Atuais
 
 ### 1. Área
+
 - **Descrição**: 
 - **Colunas**:
   - `idarea`: bigint, PK, auto increment
@@ -21,24 +22,23 @@
   - `idunidade`:bigint, FK, permite nulo
 - **Relacionamentos**:
   - Tem chave estrangeira? Qual?
-    - idunidade
+    - `idunidade`
   - Relaciona-se com quais outras tabela?
     - Tem chave estrangeira de `unidade`, e sua chave primária em `chamado`, `serviço`, `área_operador` e `area_coordenador`.
 
-### 1. Área do Coordenador
-- **Descrição**: 
+### 2. Coordenador de Área
+
+- **Descrição**: Descreve qual usuário é considerado coordenador de qual área, e quando sua designação começa e termina, ou começou e terminará.
 - **Colunas**:
-  - `idarea`: bigint, PK, auto increment
-  - `atualizadoem`: datetime2, permite nulo
-  - `criadoem`: datetime2, permite nulo
-  - `nome`: varchar(255), permite nulo
-  - `oculta`: bit, permite nulo
-  - `idunidade`:bigint, FK, permite nulo
+  - `idarea`: bigint, FK, não nulo
+  - `idusuario`: bigint, FK, não nulo
+  - `datainiciodesignacao`: datetime2, permite nulo
+  - `datafimdesignacao`: datetime2, permite nulo
 - **Relacionamentos**:
   - Tem chave estrangeira? Qual?
-    - idunidade
+    - `idarea` e `idusuario`
   - Relaciona-se com quais outras tabela?
-    - Tem chave estrangeira de `unidade`, e sua chave primária em `chamado`, `serviço`, `área_operador` e `area_coordenador`.
+    - Tem chave estrangeira de `idarea` e `idusuario`
 
 ---
 
