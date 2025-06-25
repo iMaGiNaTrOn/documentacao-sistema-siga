@@ -15,13 +15,30 @@
 - **Colunas**:
   - `idarea`: bigint, PK, auto increment
   - `atualizadoem`: datetime2, permite nulo
-  - `valor`: decimal(10,2), permite nulo
-  - ...
+  - `criadoem`: datetime2, permite nulo
+  - `nome`: varchar(255), permite nulo
+  - `oculta`: bit, permite nulo
+  - `idunidade`:bigint, FK, permite nulo
 - **Relacionamentos**:
-  - [ ] Tem chave estrangeira? Qual?
-  - [ ] Relaciona-se com qual outra tabela?
+  - Tem chave estrangeira? Qual?
+    - idunidade
+  - Relaciona-se com quais outras tabela?
+    - Tem chave estrangeira de `unidade`, e sua chave primária em `chamado`, `serviço`, `área_operador` e `area_coordenador`.
 
-(Repita para cada tabela)
+### 1. Área do Coordenador
+- **Descrição**: 
+- **Colunas**:
+  - `idarea`: bigint, PK, auto increment
+  - `atualizadoem`: datetime2, permite nulo
+  - `criadoem`: datetime2, permite nulo
+  - `nome`: varchar(255), permite nulo
+  - `oculta`: bit, permite nulo
+  - `idunidade`:bigint, FK, permite nulo
+- **Relacionamentos**:
+  - Tem chave estrangeira? Qual?
+    - idunidade
+  - Relaciona-se com quais outras tabela?
+    - Tem chave estrangeira de `unidade`, e sua chave primária em `chamado`, `serviço`, `área_operador` e `area_coordenador`.
 
 ---
 
